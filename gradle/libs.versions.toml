@@ -10,6 +10,7 @@ springDependencyManagement = "1.1.7"
 ktlint = "14.2.0"
 kotlinLogging = "8.0.4"
 springmockk = "5.0.1"
+p6spy = "2.0.1"
 
 [libraries]
 # Spring Boot starters and modules (BOM-managed)
@@ -27,6 +28,7 @@ springBootTestcontainers = { module = "org.springframework.boot:spring-boot-test
 
 # Spring Integration (BOM-managed)
 springIntegrationHttp = { module = "org.springframework.integration:spring-integration-http" }
+springIntegrationJdbc = { module = "org.springframework.integration:spring-integration-jdbc" }
 springIntegrationJpa = { module = "org.springframework.integration:spring-integration-jpa" }
 springIntegrationKafka = { module = "org.springframework.integration:spring-integration-kafka" }
 springIntegrationTest = { module = "org.springframework.integration:spring-integration-test" }
@@ -49,6 +51,7 @@ junit-platformLauncher = { module = "org.junit.platform:junit-platform-launcher"
 # Not in the Boot BOM: explicit versions
 oshai-kotlinLogging = { module = "io.github.oshai:kotlin-logging-jvm", version.ref = "kotlinLogging" }
 ninjaSquad-springmockk = { module = "com.ninja-squad:springmockk", version.ref = "springmockk" }
+gavlyukovskiy-p6spySpringBootStarter = { module = "com.github.gavlyukovskiy:p6spy-spring-boot-starter", version.ref = "p6spy" }
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
