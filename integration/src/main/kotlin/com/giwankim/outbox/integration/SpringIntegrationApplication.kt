@@ -1,4 +1,4 @@
-package com.giwankim.integration
+package com.giwankim.outbox.integration
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
