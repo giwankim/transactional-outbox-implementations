@@ -1,6 +1,9 @@
 spring:
   application:
     name: integration
+  docker:
+    compose:
+      file: ../compose.yaml
 
 decorator:
   datasource:

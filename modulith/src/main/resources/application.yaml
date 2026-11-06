@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: modulith
+  docker:
+    compose:
+      file: ../compose.yaml

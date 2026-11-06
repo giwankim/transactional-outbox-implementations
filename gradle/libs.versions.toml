@@ -7,6 +7,7 @@
 kotlin = "2.3.21"
 springBoot = "4.1.2"
 springDependencyManagement = "1.1.7"
+springModulith = "2.1.1"
 ktlint = "14.2.0"
 kotlinLogging = "8.0.4"
 springmockk = "5.0.1"
@@ -32,6 +33,15 @@ springIntegrationJdbc = { module = "org.springframework.integration:spring-integ
 springIntegrationJpa = { module = "org.springframework.integration:spring-integration-jpa" }
 springIntegrationKafka = { module = "org.springframework.integration:spring-integration-kafka" }
 springIntegrationTest = { module = "org.springframework.integration:spring-integration-test" }
+
+# Spring Modulith (managed by spring-modulith-bom)
+springModulithBom = { module = "org.springframework.modulith:spring-modulith-bom", version.ref = "springModulith" }
+springModulithEventsApi = { module = "org.springframework.modulith:spring-modulith-events-api" }
+springModulithEventsKafka = { module = "org.springframework.modulith:spring-modulith-events-kafka" }
+springModulithRuntime = { module = "org.springframework.modulith:spring-modulith-runtime" }
+springModulithStarterCore = { module = "org.springframework.modulith:spring-modulith-starter-core" }
+springModulithStarterJpa = { module = "org.springframework.modulith:spring-modulith-starter-jpa" }
+springModulithStarterTest = { module = "org.springframework.modulith:spring-modulith-starter-test" }
 
 # Database (BOM-managed)
 flyway-mysql = { module = "org.flywaydb:flyway-mysql" }

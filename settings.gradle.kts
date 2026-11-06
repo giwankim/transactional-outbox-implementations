@@ -9,3 +9,4 @@ dependencyResolutionManagement {
 }
 
 include("integration")
+include("modulith")
