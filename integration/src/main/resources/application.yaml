@@ -1,6 +1,11 @@
 spring:
   application:
     name: integration
-  docker:
-    compose:
-      file: ../compose.yaml
+
+decorator:
+  datasource:
+    p6spy:
+      enable-logging: true
+      multiline: true
+      # log-filter:
+      #   pattern: ...  # e.g. hide Flyway / Spring Integration polling noise
