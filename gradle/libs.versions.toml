@@ -1,0 +1,59 @@
+# Version catalog. See https://docs.gradle.org/current/userguide/best_practices_dependencies.html
+#
+# Libraries declared without a version are managed by the Spring Boot BOM,
+# which io.spring.dependency-management imports in each module.
+
+[versions]
+kotlin = "2.3.21"
+springBoot = "4.1.2"
+springDependencyManagement = "1.1.7"
+ktlint = "14.2.0"
+kotlinLogging = "8.0.4"
+springmockk = "5.0.1"
+
+[libraries]
+# Spring Boot starters and modules (BOM-managed)
+springBootStarterDataJpa = { module = "org.springframework.boot:spring-boot-starter-data-jpa" }
+springBootStarterFlyway = { module = "org.springframework.boot:spring-boot-starter-flyway" }
+springBootStarterIntegration = { module = "org.springframework.boot:spring-boot-starter-integration" }
+springBootStarterKafka = { module = "org.springframework.boot:spring-boot-starter-kafka" }
+springBootStarterWebmvc = { module = "org.springframework.boot:spring-boot-starter-webmvc" }
+springBootDockerCompose = { module = "org.springframework.boot:spring-boot-docker-compose" }
+springBootStarterDataJpaTest = { module = "org.springframework.boot:spring-boot-starter-data-jpa-test" }
+springBootStarterFlywayTest = { module = "org.springframework.boot:spring-boot-starter-flyway-test" }
+springBootStarterKafkaTest = { module = "org.springframework.boot:spring-boot-starter-kafka-test" }
+springBootStarterWebmvcTest = { module = "org.springframework.boot:spring-boot-starter-webmvc-test" }
+springBootTestcontainers = { module = "org.springframework.boot:spring-boot-testcontainers" }
+
+# Spring Integration (BOM-managed)
+springIntegrationHttp = { module = "org.springframework.integration:spring-integration-http" }
+springIntegrationJpa = { module = "org.springframework.integration:spring-integration-jpa" }
+springIntegrationKafka = { module = "org.springframework.integration:spring-integration-kafka" }
+springIntegrationTest = { module = "org.springframework.integration:spring-integration-test" }
+
+# Database (BOM-managed)
+flyway-mysql = { module = "org.flywaydb:flyway-mysql" }
+mysql-connectorJ = { module = "com.mysql:mysql-connector-j" }
+
+# Kotlin and Jackson (BOM-managed)
+kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect" }
+kotlin-testJunit5 = { module = "org.jetbrains.kotlin:kotlin-test-junit5" }
+jackson-kotlin = { module = "tools.jackson.module:jackson-module-kotlin" }
+
+# Testing (BOM-managed)
+testcontainers-junitJupiter = { module = "org.testcontainers:testcontainers-junit-jupiter" }
+testcontainers-kafka = { module = "org.testcontainers:testcontainers-kafka" }
+testcontainers-mysql = { module = "org.testcontainers:testcontainers-mysql" }
+junit-platformLauncher = { module = "org.junit.platform:junit-platform-launcher" }
+
+# Not in the Boot BOM: explicit versions
+oshai-kotlinLogging = { module = "io.github.oshai:kotlin-logging-jvm", version.ref = "kotlinLogging" }
+ninjaSquad-springmockk = { module = "com.ninja-squad:springmockk", version.ref = "springmockk" }
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-spring = { id = "org.jetbrains.kotlin.plugin.spring", version.ref = "kotlin" }
+kotlin-jpa = { id = "org.jetbrains.kotlin.plugin.jpa", version.ref = "kotlin" }
+spring-boot = { id = "org.springframework.boot", version.ref = "springBoot" }
+spring-dependencyManagement = { id = "io.spring.dependency-management", version.ref = "springDependencyManagement" }
+ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint" }
