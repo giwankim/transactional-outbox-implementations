@@ -10,3 +10,4 @@ dependencyResolutionManagement {
 
 include("integration")
 include("modulith")
+include("namastack")
