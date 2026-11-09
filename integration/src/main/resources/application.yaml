@@ -4,6 +4,7 @@ spring:
   docker:
     compose:
       file: ../compose.yaml
+      lifecycle-management: start-only
 
 decorator:
   datasource:

@@ -49,7 +49,14 @@ class MailConfiguration {
                     null
                 },
             ) {
-                it.poller(Pollers.fixedDelay(Duration.ofSeconds(1)).transactional())
+                // receiveTimeout(0): a blocking receive would wait with the poll transaction open, holding an
+                // InnoDB gap lock that blocks outbox INSERTs while they hold the queue's storeLock.
+                it.poller(
+                    Pollers
+                        .fixedDelay(Duration.ofSeconds(1))
+                        .receiveTimeout(0)
+                        .transactional(),
+                )
             }.get()
     }
 }
